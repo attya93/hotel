@@ -1,0 +1,10 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: $default-font-size;
+    background-image: linear-gradient(to right bottom, var(--color-Primary-light), var(--color-Primary-dark));
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--color-grey-dark-1);
+    min-height: 100vh;
+}

@@ -1,0 +1,44 @@
+.hotel-view {
+    height: 80rem;
+    flex: 1;
+}
+
+.gallery {
+    display: flex;
+
+    &__photo {
+        width: 100%;
+        display: inline-block;
+    }
+}
+
+.overview {
+
+    display: flex;
+
+
+    &__heading {}
+
+    &__star {
+        margin-right: auto;
+    }
+
+    &__icon {
+
+        &-star,
+        &-location {
+            width: 1.75rem;
+            height: 1.75rem;
+            fill: var(--color-Primary);
+        }
+    }
+
+    &__location {}
+
+
+    &__rating {}
+
+    &__rating-avg {}
+
+    &__rating-count {}
+}
