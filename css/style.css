@@ -71,9 +71,49 @@ body {
     background-color: transparent; }
     .btn-inline:hover {
       color: var(--color-grey-dark-1); }
+  .btn span {
+    margin-left: 0.3rem;
+    transition: margin-left 0.5s; }
+  .btn:hover {
+    color: var(--color-grey-dark-1); }
+    .btn:hover span {
+      margin-left: 0.8rem; }
   .btn:focus {
     outline: none;
     animation: pulsate 1s infinite; }
+
+.btn-red {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: capitalize;
+  border-radius: 10rem;
+  border: none;
+  background-image: linear-gradient(to right, var(--color-Primary-light), var(--color-Primary-dark));
+  color: var(--color-white);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer; }
+  .btn-red > * {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all 0.2s; }
+  .btn-red__visible {
+    padding: 2rem 7.5rem; }
+  .btn-red__hidden {
+    padding: 2rem 0;
+    position: absolute;
+    left: 0;
+    top: -100%; }
+  .btn-red:hover {
+    background-image: linear-gradient(to left, var(--color-Primary-light), var(--color-Primary-dark)); }
+  .btn-red:hover .btn-red__visible {
+    transform: translateY(100%); }
+  .btn-red:hover .btn-red__hidden {
+    top: 0; }
+  .btn-red:focus {
+    outline: none;
+    animation: pulsate 0.8s infinite; }
 
 .header {
   font-size: 1.4rem;
@@ -276,16 +316,112 @@ body {
   display: flex;
   padding: 4.5rem;
   background-color: var(--color-grey-light-3);
-  border-bottom: var(--line); }
+  border-bottom: var(--line);
+  font-size: 1.4rem; }
 
 .description {
-  font-size: 1.4rem;
   background-color: var(--color-white);
   box-shadow: var(--shadow);
   padding: 3rem;
   flex: 0 0 60%;
   margin-right: 4.5rem; }
 
+.pragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.list {
+  text-transform: capitalize;
+  margin: 3rem 0;
+  list-style: none;
+  padding: 3rem;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  display: flex;
+  flex-wrap: wrap; }
+  .list__item {
+    flex: 0 0 50%;
+    margin-bottom: 0.7rem; }
+  .list__item::before {
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.7rem;
+    background-color: var(--color-Primary);
+    -webkit-mask-image: url(../../img/chevron-thin-right.svg);
+    -webkit-mask-size: cover;
+    mask-image: url(../../img/chevron-thin-right.svg);
+    mask-size: cover; }
+
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+  display: flex;
+  align-items: center; }
+  .recommend__count {
+    margin-right: auto; }
+  .recommend__photo {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid var(--color-white); }
+    .recommend__photo:not(:last-child) {
+      margin-right: -1.5rem; }
+
 .user-reviews {
-  background-color: indigo;
-  flex: 1; }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.review {
+  padding: 3rem;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow);
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden; }
+  .review__text {
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 10; }
+  .review__user {
+    display: flex;
+    align-items: center; }
+    .review__user-box {
+      text-transform: capitalize; }
+    .review__user-name {
+      font-size: 1.2rem;
+      font-weight: 700; }
+    .review__user-date {
+      font-size: 1.1rem;
+      font-weight: 200;
+      color: var(--color-grey-dark-3); }
+  .review__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    margin-right: 2rem; }
+  .review__rating {
+    margin-left: auto;
+    color: var(--color-Primary);
+    font-size: 2rem; }
+  .review::before {
+    content: "\201c";
+    position: absolute;
+    top: -2rem;
+    left: -1rem;
+    line-height: 0.95;
+    font-size: 20rem;
+    font-family: sans-serif;
+    color: var(--color-grey-light-3);
+    z-index: 1; }
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center; }
+  .cta__book-now {
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem; }
