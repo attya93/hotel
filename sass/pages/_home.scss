@@ -6,6 +6,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width:heightcal(500)) {
+        flex-wrap: wrap;
+        height: 11rem;
+        align-content: space-around;
+    }
 }
 
 .sidebar {
@@ -15,5 +21,22 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+}
+
+.detail {
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-3);
+    border-bottom: var(--line);
+    font-size: 1.4rem;
+
+    @media screen and (max-width:heightcal(900)) {
+        padding: 2.5rem;
+    }
+
+    @media screen and (max-width:heightcal(600)) {
+        flex-direction: column;
+    }
 
 }

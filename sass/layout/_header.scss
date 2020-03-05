@@ -3,6 +3,7 @@
     margin-left: 2rem;
 }
 
+
 .search {
     flex: 0 0 40%; //grow 0 shrink 0   size40% from header
 
@@ -10,6 +11,11 @@
     align-items: center;
     justify-content: center;
 
+    @media screen and (max-width:heightcal(500)) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--color-grey-light-2);
+    }
 
     &__input {
         font-family: inherit;

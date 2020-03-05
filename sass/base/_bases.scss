@@ -12,4 +12,8 @@
 html {
     font-size: 62.5%; // 1rem = 1px
     box-sizing: border-box;
+
+    @media screen and (max-width:heightcal(1100)) {
+        font-size: 50%;
+    }
 }

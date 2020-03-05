@@ -4,8 +4,17 @@
     background-color: var(--color-grey-light-2);
     box-shadow: var(--shadow-dark);
     min-height: 50rem;
+
+    @media screen and (max-width:heightcal(1200)) {
+        margin: 0;
+        max-width: 100%;
+    }
 }
 
 .content {
     display: flex;
+
+    @media screen and (max-width:heightcal(900)) {
+        flex-direction: column;
+    }
 }
