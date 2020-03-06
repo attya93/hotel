@@ -110,6 +110,25 @@
         align-items: center;
     }
 
+    &__user {
+        position: relative;
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            background-color: var(--color-grey-light-2);
+        }
+    }
+
+    .user-nav__user:hover .user-nav__menu {
+        opacity: 1;
+        width: 100%;
+        z-index: 50;
+    }
+
     &__user-photo {
         height: 3.75rem;
         width: 3.75rem;
